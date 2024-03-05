@@ -4,13 +4,14 @@
  */
 package com.lemon.DAL;
 
-import com.lemon.DTO.Person;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import com.lemon.DAL.DTO.Person;
 
 /**
  *
@@ -50,7 +51,6 @@ public class PersonDAL extends ConnectDB {
         return persons;
     }
 
-    
     public static List<Person> getAllPersonIsStudent() throws ClassNotFoundException, SQLException {
         List<Person> persons = new ArrayList<>();
         if (open()) {
@@ -83,7 +83,7 @@ public class PersonDAL extends ConnectDB {
         }
         return persons;
     }
-    
+
     public static List<Person> getPersonIsTeacher() throws ClassNotFoundException, SQLException {
         List<Person> persons = new ArrayList<>();
         if (open()) {
@@ -115,7 +115,7 @@ public class PersonDAL extends ConnectDB {
         }
         return persons;
     }
-    
+
     public static List<Person> getStudentBySearch(String sql) throws ClassNotFoundException, SQLException {
         List<Person> persons = new ArrayList<>();
         if (open()) {
@@ -146,8 +146,8 @@ public class PersonDAL extends ConnectDB {
         }
         return persons;
     }
-    
-    public static List<Person> getStudentsInCourse(int courseID) throws ClassNotFoundException, SQLException{
+
+    public static List<Person> getStudentsInCourse(int courseID) throws ClassNotFoundException, SQLException {
         List<Person> persons = new ArrayList<>();
         if (open()) {
             PreparedStatement stm = null;
@@ -181,7 +181,7 @@ public class PersonDAL extends ConnectDB {
         }
         return persons;
     }
-    
+
     public static List<Person> getTeacherBySearch(String sql) throws ClassNotFoundException, SQLException {
         List<Person> persons = new ArrayList<>();
         if (open()) {
@@ -212,7 +212,7 @@ public class PersonDAL extends ConnectDB {
         }
         return persons;
     }
-    
+
     public static boolean insertPerson(Person person) throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;

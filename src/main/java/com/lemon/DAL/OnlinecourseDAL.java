@@ -4,14 +4,15 @@
  */
 package com.lemon.DAL;
 
-import com.lemon.DTO.Onlinecourse;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OnlinecourseDAL extends ConnectDB{
+import com.lemon.DAL.DTO.Onlinecourse;
+
+public class OnlinecourseDAL extends ConnectDB {
     public static boolean insertOnlineCourse(Onlinecourse onlineCourse) throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
@@ -105,7 +106,7 @@ public class OnlinecourseDAL extends ConnectDB{
         }
         return onlineCourses;
     }
-    
+
     public static Onlinecourse getOnlineCourseByID(int id) throws ClassNotFoundException, SQLException {
         if (open()) {
             PreparedStatement stm = null;

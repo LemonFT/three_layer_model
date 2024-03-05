@@ -4,21 +4,22 @@
  */
 package com.lemon.BLL;
 
-import com.lemon.DAL.CourseinstructorDAL;
-import com.lemon.DAL.PersonDAL;
-import com.lemon.DTO.Courseinstructor;
-import com.lemon.DTO.Person;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.lemon.DAL.CourseinstructorDAL;
+import com.lemon.DAL.PersonDAL;
+import com.lemon.DAL.DTO.Courseinstructor;
+import com.lemon.DAL.DTO.Person;
 
 /**
  *
  * @author LAM
  */
 public class CourseinstructorBLL {
-    public List<Courseinstructor> getAllCourseInstructors(){
+    public List<Courseinstructor> getAllCourseInstructors() {
         try {
             return CourseinstructorDAL.getAllCourseInstructors();
         } catch (ClassNotFoundException | SQLException ex) {
@@ -26,7 +27,8 @@ public class CourseinstructorBLL {
         }
         return null;
     }
-    public List<Person> getStudentsInCourse(int courseID){
+
+    public List<Person> getStudentsInCourse(int courseID) {
         try {
             return PersonDAL.getStudentsInCourse(courseID);
         } catch (ClassNotFoundException | SQLException ex) {

@@ -17,11 +17,11 @@ import com.lemon.BLL.CourseBLL;
 import com.lemon.BLL.CourseinstructorBLL;
 import com.lemon.BLL.OnlinecourseBLL;
 import com.lemon.BLL.PersonBLL;
-import com.lemon.DTO.Course;
-import com.lemon.DTO.Courseinstructor;
-import com.lemon.DTO.Onlinecourse;
-import com.lemon.DTO.Person;
-import com.lemon.DTO.Studentgrade;
+import com.lemon.DAL.DTO.Course;
+import com.lemon.DAL.DTO.Courseinstructor;
+import com.lemon.DAL.DTO.Onlinecourse;
+import com.lemon.DAL.DTO.Person;
+import com.lemon.DAL.DTO.Studentgrade;
 import com.lemon.GUI.TestGraphics;
 import com.lemon.GUI.tablecustom.TableCustom;
 

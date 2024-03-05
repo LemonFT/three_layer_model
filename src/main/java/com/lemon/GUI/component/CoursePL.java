@@ -14,14 +14,15 @@ import javax.swing.JOptionPane;
 
 import com.lemon.BLL.CourseBLL;
 import com.lemon.DAL.CourseDAL;
+import com.lemon.DAL.DTO.Department;
+import com.lemon.DAL.DTO.Onlinecourse;
+import com.lemon.DAL.DTO.Onsitecourse;
 import com.lemon.DAL.DepartmentDAL;
 import com.lemon.DAL.OnlinecourseDAL;
 import com.lemon.DAL.OnsitecourseDAL;
 import com.lemon.DAL.PersonDAL;
-import com.lemon.DTO.Department;
-import com.lemon.DTO.Onlinecourse;
-import com.lemon.DTO.Onsitecourse;
-import com.lemon.DTO.Person;
+import com.lemon.DAL.DTO.Person;
+
 import com.lemon.GUI.TestGraphics;
 
 /**

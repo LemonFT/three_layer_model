@@ -4,21 +4,15 @@
  */
 package com.lemon.GUI.component;
 
-import com.lemon.DAL.CourseDAL;
-import com.lemon.DAL.StudentgradeDAL;
-import com.lemon.DTO.Course;
-import com.lemon.DTO.Studentgrade;
-import com.lemon.GUI.TestGraphics;
 import java.awt.Color;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.sql.SQLException;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.swing.JLabel;
+
+import com.lemon.GUI.TestGraphics;
 
 public class SideBar extends javax.swing.JPanel {
 
@@ -32,7 +26,8 @@ public class SideBar extends javax.swing.JPanel {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         panelLogo = new javax.swing.JPanel();
@@ -68,9 +63,11 @@ public class SideBar extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menuItem1MouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menuItem1MouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 menuItem1MouseExited(evt);
             }
@@ -87,9 +84,11 @@ public class SideBar extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menuItem2MouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menuItem2MouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 menuItem2MouseExited(evt);
             }
@@ -106,9 +105,11 @@ public class SideBar extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menuItem3MouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 menuItem3MouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 menuItem3MouseExited(evt);
             }
@@ -129,30 +130,40 @@ public class SideBar extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(menuItem1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(menuItem2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(menuItem3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(lg10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(lg9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(panelLogo, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(menuItem1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(menuItem2, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(menuItem3, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lg10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                Short.MAX_VALUE)
+                        .addComponent(lg9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(menuItem1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(menuItem2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(menuItem3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lg10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lg9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(panelLogo, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(menuItem1, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(menuItem2, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(menuItem3, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lg10, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lg9, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(158, Short.MAX_VALUE)));
     }// </editor-fold>//GEN-END:initComponents
 
     private void focusMenuItem(JLabel lbFocus, int index) {
@@ -163,62 +174,62 @@ public class SideBar extends javax.swing.JPanel {
         lbFocus.setForeground(Color.BLACK);
     }
 
-    private void menuItem1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem1MouseEntered
+    private void menuItem1MouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem1MouseEntered
         menuItem1.setForeground(Color.BLACK);
-    }//GEN-LAST:event_menuItem1MouseEntered
+    }// GEN-LAST:event_menuItem1MouseEntered
 
-    private void menuItem1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem1MouseExited
+    private void menuItem1MouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem1MouseExited
         if (menuItemFocus != 1) {
             menuItem1.setForeground(new Color(255, 255, 255));
         }
-    }//GEN-LAST:event_menuItem1MouseExited
+    }// GEN-LAST:event_menuItem1MouseExited
 
-    private void menuItem3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem3MouseEntered
+    private void menuItem3MouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem3MouseEntered
         menuItem3.setForeground(Color.BLACK);
-    }//GEN-LAST:event_menuItem3MouseEntered
+    }// GEN-LAST:event_menuItem3MouseEntered
 
-    private void menuItem3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem3MouseExited
+    private void menuItem3MouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem3MouseExited
         if (menuItemFocus != 3) {
             menuItem3.setForeground(new Color(255, 255, 255));
         }
-    }//GEN-LAST:event_menuItem3MouseExited
+    }// GEN-LAST:event_menuItem3MouseExited
 
-    private void menuItem2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem2MouseEntered
+    private void menuItem2MouseEntered(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem2MouseEntered
         menuItem2.setForeground(Color.BLACK);
-    }//GEN-LAST:event_menuItem2MouseEntered
+    }// GEN-LAST:event_menuItem2MouseEntered
 
-    private void menuItem2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem2MouseExited
+    private void menuItem2MouseExited(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem2MouseExited
         if (menuItemFocus != 2) {
             menuItem2.setForeground(new Color(255, 255, 255));
         }
-    }//GEN-LAST:event_menuItem2MouseExited
+    }// GEN-LAST:event_menuItem2MouseExited
 
-    private void menuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem1MouseClicked
+    private void menuItem1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem1MouseClicked
         TestGraphics.addComponentCourse();
         focusMenuItem(menuItem1, 1);
-    }//GEN-LAST:event_menuItem1MouseClicked
+    }// GEN-LAST:event_menuItem1MouseClicked
 
-    private void menuItem2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem2MouseClicked
+    private void menuItem2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem2MouseClicked
         TestGraphics.addComponentCourseInstructor();
         focusMenuItem(menuItem2, 2);
-    }//GEN-LAST:event_menuItem2MouseClicked
+    }// GEN-LAST:event_menuItem2MouseClicked
 
-    private void menuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuItem3MouseClicked
+    private void menuItem3MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_menuItem3MouseClicked
         TestGraphics.addComponentStudentGrade();
         focusMenuItem(menuItem3, 3);
-    }//GEN-LAST:event_menuItem3MouseClicked
+    }// GEN-LAST:event_menuItem3MouseClicked
 
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        GradientPaint gradient = new GradientPaint(0, 0, Color.decode("#4568DC"), 0, getHeight(), Color.decode("#B06AB3"));
+        GradientPaint gradient = new GradientPaint(0, 0, Color.decode("#4568DC"), 0, getHeight(),
+                Color.decode("#B06AB3"));
         g2.setPaint(gradient);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 0, 0);
-//        g2.fillRect(getWidth() - 20, 0, 20, getHeight());
+        // g2.fillRect(getWidth() - 20, 0, 20, getHeight());
         super.paintComponent(g);
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lg;
@@ -231,6 +242,7 @@ public class SideBar extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void resetTable() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from
+                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

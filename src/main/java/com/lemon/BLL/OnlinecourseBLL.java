@@ -4,19 +4,20 @@
  */
 package com.lemon.BLL;
 
-import com.lemon.DAL.OnlinecourseDAL;
-import com.lemon.DTO.Onlinecourse;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.lemon.DAL.OnlinecourseDAL;
+import com.lemon.DAL.DTO.Onlinecourse;
 
 /**
  *
  * @author LAM
  */
 public class OnlinecourseBLL {
-    public List<Onlinecourse> getAllOnlineCourses(){
+    public List<Onlinecourse> getAllOnlineCourses() {
         try {
             return OnlinecourseDAL.getAllOnlineCourses();
         } catch (ClassNotFoundException | SQLException ex) {

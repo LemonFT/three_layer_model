@@ -15,8 +15,8 @@ import javax.swing.JOptionPane;
 import com.lemon.BLL.StudentgradeBLL;
 import com.lemon.DAL.CourseDAL;
 import com.lemon.DAL.PersonDAL;
-import com.lemon.DTO.Course;
-import com.lemon.DTO.Person;
+import com.lemon.DAL.DTO.Course;
+import com.lemon.DAL.DTO.Person;
 import com.lemon.GUI.TestGraphics;
 
 /**

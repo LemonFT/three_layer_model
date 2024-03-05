@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lemon.DTO.Studentgrade;
+import com.lemon.DAL.DTO.Studentgrade;
 
 public class StudentgradeDAL extends ConnectDB {
     public static List<Studentgrade> getAllStudentGrades() throws ClassNotFoundException, SQLException {

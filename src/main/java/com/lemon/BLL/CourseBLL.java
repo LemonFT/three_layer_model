@@ -13,11 +13,11 @@ import com.lemon.DAL.CourseinstructorDAL;
 import com.lemon.DAL.OnlinecourseDAL;
 import com.lemon.DAL.OnsitecourseDAL;
 import com.lemon.DAL.StudentgradeDAL;
-import com.lemon.DTO.Course;
-import com.lemon.DTO.Courseinstructor;
-import com.lemon.DTO.Onlinecourse;
-import com.lemon.DTO.Onsitecourse;
-import com.lemon.DTO.Studentgrade;
+import com.lemon.DAL.DTO.Course;
+import com.lemon.DAL.DTO.Courseinstructor;
+import com.lemon.DAL.DTO.Onlinecourse;
+import com.lemon.DAL.DTO.Onsitecourse;
+import com.lemon.DAL.DTO.Studentgrade;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -100,16 +100,21 @@ public class CourseBLL {
         }
         try {
             int rs_insertCourse = CourseDAL.insertCourse_ReturnID_AI(new Course(title, creditsInt, departmentID));
-            boolean rs_insertOnlineCourse = OnlinecourseDAL.insertOnlineCourse(new Onlinecourse(rs_insertCourse, url));
-            boolean rs_insertConrseInstructor = true;
-            for (Integer id : teacherIDs) {
-                rs_insertConrseInstructor = CourseinstructorDAL
-                        .insertCourseInstructor(new Courseinstructor(rs_insertCourse, id));
-                if (!rs_insertConrseInstructor) {
-                    break;
+            if (rs_insertCourse != -1) {
+                boolean rs_insertOnlineCourse = OnlinecourseDAL
+                        .insertOnlineCourse(new Onlinecourse(rs_insertCourse, url));
+                boolean rs_insertConrseInstructor = true;
+                for (Integer id : teacherIDs) {
+                    rs_insertConrseInstructor = CourseinstructorDAL
+                            .insertCourseInstructor(new Courseinstructor(rs_insertCourse, id));
+                    if (!rs_insertConrseInstructor) {
+                        break;
+                    }
                 }
-            }
-            if (rs_insertCourse == -1 || !rs_insertOnlineCourse || !rs_insertConrseInstructor) {
+                if (!rs_insertOnlineCourse || !rs_insertConrseInstructor) {
+                    return "Thêm khóa học thất bại";
+                }
+            } else {
                 return "Thêm khóa học thất bại";
             }
         } catch (SQLException | ClassNotFoundException ex) {

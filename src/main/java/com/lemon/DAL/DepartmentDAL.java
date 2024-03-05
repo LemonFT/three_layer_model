@@ -4,7 +4,6 @@
  */
 package com.lemon.DAL;
 
-import com.lemon.DTO.Department;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +11,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class DepartmentDAL extends ConnectDB{
+import com.lemon.DAL.DTO.Department;
+
+public class DepartmentDAL extends ConnectDB {
     public static List<Department> getAllDepartment() throws ClassNotFoundException, SQLException {
         List<Department> departments = new ArrayList<>();
         if (open()) {

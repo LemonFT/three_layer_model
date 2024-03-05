@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.lemon.DTO;
+package com.lemon.DAL.DTO;
 
 /**
  *
  * @author LAM
  */
-public class Onlinecourse {
+public class Courseinstructor {
     private int courseID;
-    private String url;
+    private int personID;
 
-    public Onlinecourse(int courseID, String url) {
+    public Courseinstructor(int courseID, int personID) {
         this.courseID = courseID;
-        this.url = url;
+        this.personID = personID;
     }
 
     public int getCourseID() {
@@ -25,12 +25,12 @@ public class Onlinecourse {
         this.courseID = courseID;
     }
 
-    public String getUrl() {
-        return url;
+    public int getPersonID() {
+        return personID;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setPersonID(int personID) {
+        this.personID = personID;
     }
     
 }

@@ -4,16 +4,16 @@
  */
 package com.lemon.DAL;
 
-import com.lemon.DTO.Onsitecourse;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class OnsitecourseDAL extends ConnectDB{
+import com.lemon.DAL.DTO.Onsitecourse;
+
+public class OnsitecourseDAL extends ConnectDB {
     public static boolean insertOnsiteCourse(Onsitecourse onsiteCourse) throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
@@ -113,7 +113,7 @@ public class OnsitecourseDAL extends ConnectDB{
         }
         return onsiteCourses;
     }
-    
+
     public static Onsitecourse getOnsiteCourseByID(int id) throws ClassNotFoundException, SQLException {
         if (open()) {
             PreparedStatement stm = null;

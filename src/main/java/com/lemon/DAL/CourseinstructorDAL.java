@@ -4,16 +4,18 @@
  */
 package com.lemon.DAL;
 
-import com.lemon.DTO.Courseinstructor;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.lemon.DAL.DTO.Courseinstructor;
+
 public class CourseinstructorDAL extends ConnectDB {
 
-    public static boolean insertCourseInstructor(Courseinstructor courseInstructor) throws SQLException, ClassNotFoundException {
+    public static boolean insertCourseInstructor(Courseinstructor courseInstructor)
+            throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
             try {
@@ -35,7 +37,8 @@ public class CourseinstructorDAL extends ConnectDB {
         return false;
     }
 
-    public static boolean deleteCourseInstructor(int courseID, int personID) throws SQLException, ClassNotFoundException {
+    public static boolean deleteCourseInstructor(int courseID, int personID)
+            throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
             try {
@@ -78,7 +81,8 @@ public class CourseinstructorDAL extends ConnectDB {
         return false;
     }
 
-    public static boolean updateCourseInstructor(Courseinstructor courseInstructor) throws SQLException, ClassNotFoundException {
+    public static boolean updateCourseInstructor(Courseinstructor courseInstructor)
+            throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
             try {

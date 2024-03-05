@@ -4,7 +4,6 @@
  */
 package com.lemon.DAL;
 
-import com.lemon.DTO.Course;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,6 +11,8 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import com.lemon.DAL.DTO.Course;
 
 /**
  *
@@ -50,18 +51,17 @@ public class CourseDAL extends ConnectDB {
         return courses;
     }
 
-    public static List<HashMap<String, String>> getCourseByTeacherID(int teacherID) throws ClassNotFoundException, SQLException {
+    public static List<HashMap<String, String>> getCourseByTeacherID(int teacherID)
+            throws ClassNotFoundException, SQLException {
         List<HashMap<String, String>> infoCourses = new ArrayList<>();
         if (open()) {
             PreparedStatement stm = null;
             ResultSet rs = null;
             try {
-                String sql = 
-                        "select course.CourseID as CourseID, course.Title as Title, course.Credits as Credits, course.DepartmentID as DepartmentID, " 
-                        + "onlinecourse.url as url, onsitecourse.Location as Location, onsitecourse.Days as Days, onsitecourse.Time from course join courseinstructor on course.CourseID = courseinstructor.CourseID "
-                        + "left join onlinecourse on course.CourseID = onlinecourse.CourseID "
-                        + "left join onsitecourse on course.courseID = onsitecourse.CourseID "
-                        + "where courseinstructor.PersonID = ?";
+                String sql = "select course.CourseID as CourseID, course.Title as Title, course.Credits as Credits, course.DepartmentID as DepartmentID, "
+                        + "onlinecourse.url as url, onsitecourse.Location as Location, onsitecourse.Days as Days, onsitecourse.Time from course join "
+                        + "courseinstructor on course.CourseID = courseinstructor.CourseID left join onlinecourse on course.CourseID = onlinecourse.CourseID "
+                        + "left join onsitecourse on course.courseID = onsitecourse.CourseID where courseinstructor.PersonID = ?";
                 stm = getConnection().prepareStatement(sql);
                 stm.setInt(1, teacherID);
                 rs = stm.executeQuery();
@@ -208,7 +208,6 @@ public class CourseDAL extends ConnectDB {
         return false;
     }
 
-    
     public static boolean deleteCourse(Course course) throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
@@ -229,7 +228,7 @@ public class CourseDAL extends ConnectDB {
         }
         return false;
     }
-    
+
     public static boolean deleteCourse(int courseID) throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;

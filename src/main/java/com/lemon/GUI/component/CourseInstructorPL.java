@@ -16,8 +16,8 @@ import javax.swing.table.DefaultTableModel;
 import com.lemon.BLL.CourseBLL;
 import com.lemon.BLL.CourseinstructorBLL;
 import com.lemon.BLL.OfficeassignmentBLL;
-import com.lemon.DTO.Officeassignment;
-import com.lemon.DTO.Person;
+import com.lemon.DAL.DTO.Officeassignment;
+import com.lemon.DAL.DTO.Person;
 import com.lemon.GUI.TestGraphics;
 
 /**

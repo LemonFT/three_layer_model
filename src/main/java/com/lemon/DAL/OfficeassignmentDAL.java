@@ -4,7 +4,6 @@
  */
 package com.lemon.DAL;
 
-import com.lemon.DTO.Officeassignment;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,8 +11,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class OfficeassignmentDAL extends ConnectDB{
-    public static boolean insertOfficeAssignment(Officeassignment officeAssignment) throws SQLException, ClassNotFoundException {
+import com.lemon.DAL.DTO.Officeassignment;
+
+public class OfficeassignmentDAL extends ConnectDB {
+    public static boolean insertOfficeAssignment(Officeassignment officeAssignment)
+            throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
             try {
@@ -36,7 +38,8 @@ public class OfficeassignmentDAL extends ConnectDB{
         return false;
     }
 
-    public static boolean updateOfficeAssignment(Officeassignment officeAssignment) throws SQLException, ClassNotFoundException {
+    public static boolean updateOfficeAssignment(Officeassignment officeAssignment)
+            throws SQLException, ClassNotFoundException {
         if (open()) {
             PreparedStatement stm = null;
             try {
@@ -109,8 +112,9 @@ public class OfficeassignmentDAL extends ConnectDB{
         }
         return officeAssignments;
     }
-    
-    public static Officeassignment getAllOfficeAssignmentByTeacherID(int teacherID) throws ClassNotFoundException, SQLException {
+
+    public static Officeassignment getAllOfficeAssignmentByTeacherID(int teacherID)
+            throws ClassNotFoundException, SQLException {
         if (open()) {
             PreparedStatement stm = null;
             ResultSet rs = null;
