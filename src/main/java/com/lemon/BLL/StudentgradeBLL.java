@@ -53,15 +53,13 @@ public class StudentgradeBLL {
                     + "%' or "
                     + " Grade like '%" + searchField + "%' group by EnrollmentID order by EnrollmentID " + sort;
         } else {
-            if (columnFilter.equals("CourseID")) {
-                sql += "where Concat(course.CourseID, ' - ', course.Title) like '%" + searchField
-                        + "%' group by EnrollmentID order by " + columnFilter + " " + sort;
-            } else if (columnFilter.equals("StudentID")) {
-                sql += "where Concat(person.PersonID, ' - ', person.Lastname, person.Firstname) like '%" + searchField
-                        + "%' group by EnrollmentID order by " + columnFilter + " " + sort;
-            } else {
-                sql += "where " + columnFilter + " like '%" + searchField + "%' group by EnrollmentID order by "
-                        + columnFilter + " " + sort;
+            switch (columnFilter) {
+                case "CourseID" -> sql += "where Concat(course.CourseID, ' - ', course.Title) like '%" + searchField
+                            + "%' group by EnrollmentID order by course." + columnFilter + " " + sort;
+                case "StudentID" -> sql += "where Concat(person.PersonID, ' - ', person.Lastname, person.Firstname) like '%" + searchField
+                            + "%' group by EnrollmentID order by " + columnFilter + " " + sort;
+                default -> sql += "where " + columnFilter + " like '%" + searchField + "%' group by EnrollmentID order by "
+                            + columnFilter + " " + sort;
             }
         }
         try {

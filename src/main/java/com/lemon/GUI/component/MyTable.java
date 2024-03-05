@@ -162,9 +162,6 @@ public class MyTable extends javax.swing.JPanel {
             throws ClassNotFoundException, SQLException {
         List<Course> courses = new CourseBLL().getAllCourse();
         List<Person> students = new PersonBLL().getAllPersonIsStudent();
-        for (Person p : students) {
-            System.err.println(p.toString());
-        }
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         resetTable(model);
         model.addColumn("Mã đăng kí");
